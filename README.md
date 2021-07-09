@@ -49,9 +49,9 @@ https://www.youtube.com/watch?v=ZSUGfIy1ds8
 https://www.youtube.com/watch?v=brNL_bvUCck
 
 
-  
-
+ 
 SameOriginPolicy Sop
+https://developer.mozilla.org/es/docs/Web/Security/Same-origin_policy
 Origen se refiere a si dos pagunas tienen el protocolo y el mismo puerto .
 La política same-origin (mismo-origen) restringe cómo un documento o script cargado desde un origen puede interactuar con un recurso de otro origen. Es un mecanismo de seguridad crítico para aislar documentos potencialmente maliciosos
 
@@ -73,7 +73,7 @@ X-Frame-Options: SAMEORIGIN
 La página sólo puede ser mostrada en un marco del mismo origen que dicha página.
 X-Frame-Options: ALLOW-FROM https://example.com/
 La página sólo puede ser mostrada en un marco del origen especificado.Tenga en cuenta que en Firefox esto todavía sufre del mismo problema que SAMEORIGIN
-
+  
 SOLUCIÓN
 Apache
 Header always append X-Frame-Options SAMEORIGIN
