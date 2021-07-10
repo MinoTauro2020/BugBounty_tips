@@ -53,7 +53,8 @@ https://www.youtube.com/watch?v=brNL_bvUCck
 SameOriginPolicy Sop
 https://developer.mozilla.org/es/docs/Web/Security/Same-origin_policy
 Origen se refiere a si dos pagunas tienen el protocolo y el mismo puerto .
-La política same-origin (mismo-origen) restringe cómo un documento o script cargado desde un origen puede interactuar con un recurso de otro origen. Es un mecanismo de seguridad crítico para aislar documentos potencialmente maliciosos
+La política same-origin (mismo-origen) restringe cómo un documento o script cargado desde un origen puede interactuar con un recurso de otro origen. Es un mecanismo de seguridad crítico para aislar documentos potencialmente malicioso
+Es impedir que dominios que no compartan el mismo host, puerto y protocolo sean capaces de acceder a la información de otro dominio
 
 CSRF
 Los endpoints GET no deben tener acciones de modificación, y si esto se necesita se debería requerir una petición POST. Además los endpoints POST no debería aceptar la intercambiabilidad de aceptar peticiones GET con parametros en query string
@@ -63,7 +64,14 @@ Al igual que con {{Glosario ("XSS")}}, el filtrado de entrada es importante.
 Debería de existir siempre un requerimiento de confirmación para cualquier acción delicada,.
 Las cookies empleadas en acciones delicadas deberían de tener una vida útil breve.
 
-  
+PREVENIR
+https://www.youtube.com/watch?v=KvE3nifqELk
+QUE LAS PETICIONES VENGAN DE SITIOS CONOCIDOS - ip - dominios 
+POST - PETCIONES ASINCRONAS CON AJAX
+HTP_REFERER
+mejor que lo anterior
+HEAD
+METER EL TOKEN EN HEAD EN UNA COOKIE
   
 X-Frame-Options
 La página sólo puede ser mostrada en un marco del mismo origen que dicha página.
@@ -90,8 +98,7 @@ IIS
   </httpProtocol>
 </system.webServer>
   
-  
-  
+
   
   
   
