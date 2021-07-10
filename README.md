@@ -25,8 +25,10 @@ Creando
 Set-Cookie: <nombre-cookie>=<valor-cookie>
 Session
 Expires
+ 
 Securizar
 Cookies Secure y HttpOnly
+Secure es un parámetro para indicar que una cookie solo debería ser utilizada bajo un servidor seguro, tal como SSL
 Previene la lectura y modificacion
 Para prevenir ataques cross-site scripting (XSS (en-US)), las cookies HttpOnly son inaccesibles desde la API de Javascript Document.cookie; Solamente se envían al servidor. Por ejemplo, las cookies que persisten sesiones del lado del servidor no necesitan estar disponibles para JavaScript, por lo que debería establecerse el flag HttpOnly.
 
@@ -68,7 +70,7 @@ PREVENIR
 https://www.youtube.com/watch?v=KvE3nifqELk
 QUE LAS PETICIONES VENGAN DE SITIOS CONOCIDOS - ip - dominios 
 POST - PETCIONES ASINCRONAS CON AJAX
-HTP_REFERER
+HTTP_REFERER
 mejor que lo anterior
 HEAD
 METER EL TOKEN EN HEAD EN UNA COOKIE
