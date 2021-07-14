@@ -104,10 +104,30 @@ IIS
 </system.webServer>
   
 https://www.arsys.es/blog/instalar-fail2ban/
-  
-  
+
+XSS
+Cross Site Scripting (XSS) es un tipo de vulnerabilidad en 
+las aplicaciones Web donde el atacante puede inyectar código 
+JavaScript en el navegador de su víctima. 
  
+Reflected: Cuando la aplicación refleja algún dato recibido 
+por parámetro en un request HTTP sin sanitizar.
+Stored: Similar al reflected pero los datos no sanitizados son 
+guardados en la base de datos.
+DOM Based: El payload XSS se ejecuta como resultado de la 
+modificación del "entorno" DOM en el navegador de la víctima. 
+(la vulnerabilidad existe en el código del lado del cliente en lugar del 
+código del lado del servidor).
+ 
+------------------------------------------------------------------------------
+SOLUCION
+/* Prevent XSS input */
+$_GET   = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
+$_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+/* I prefer not to use $_REQUEST...but for those who do: */
+$_REQUEST = (array)$_POST + (array)$_GET + (array)$_REQUEST;
   
-
-
+  
+  
+  
 
