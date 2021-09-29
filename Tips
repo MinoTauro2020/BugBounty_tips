@@ -138,3 +138,14 @@ $_GET   = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
 $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 /* I prefer not to use $_REQUEST...but for those who do: */
 $_REQUEST = (array)$_POST + (array)$_GET + (array)$_REQUEST;
+-----------------------------------------------------------------------------
+SQL
+https://byte-mind.net/sql-injection-tipos-ejemplos-y-contramedidas/
+Principalmente podemos destacar 3 tipos de ataques:
+Ataque por error -> es el ataque más común y el más fácil de explotar ya que es la propia aplicación la que va indicando los errores de la base de datos al realizar las diferentes consultas. Con este error es muy sencillo obtener cualquier dato de la base de datos ya sean estructura, tablas, campos e incluso los datos almacenados.
+Ataque por union -> este tipo de ataque consiste en que el portal devuelva un resultado, y a partir de ahí, añadir al resultado original el resultado de otra query de tal forma que se muestren junto con los datos del portal, los datos sensibles del mismo que no debería de poderse obtener.
+Ataque ciego (blind) -> es el ataque más complicado y el más avanzado, es la última opción cuando ninguno de los ataques anteriores funcionan. En este caso hay que ser muy creativos y se deben de realizar preguntas a la base de datos mediante booleanos, es decir, verdadero o falso, todo aquello que se necesite saber. Aquí podemos separar en dos tipos más:
+Basado en condicionales -> si la consulta está bien mostrará los resultados, sino no mostrará nada.
+Basada en tiempo -> si la consulta es correcta devolverá los resultados a los n segundos, si no no mostrará nada.
+
+
