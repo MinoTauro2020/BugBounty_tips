@@ -148,4 +148,9 @@ Ataque ciego (blind) -> es el ataque más complicado y el más avanzado, es la �
 Basado en condicionales -> si la consulta está bien mostrará los resultados, sino no mostrará nada.
 Basada en tiempo -> si la consulta es correcta devolverá los resultados a los n segundos, si no no mostrará nada.
 
+SSRF
+https://blog.hackmetrix.com/ssrf-server-side-request-forgery/
+
+
+
 
