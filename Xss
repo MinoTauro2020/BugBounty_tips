@@ -59,3 +59,28 @@ En las recompensas de errores, los errores de auto-XSS generalmente no se acepta
 La ingeniería o la manipulación de las víctimas no suelen aceptarse en errores.
 programas de recompensas porque no son cuestiones puramente técnicas.
 
+#PREVENIR
+Para evitar XSS, una aplicación debe implementar dos controles: entrada robusta validación y escape de salida contextual y codificación. Aplicaciones
+nunca debe insertar datos enviados por el usuario directamente en un documento HTML incluyendo, por ejemplo, etiquetas <script> internas, nombres de etiquetas 
+HTML o nombres de atributos. En cambio, el servidor debe validar esa entrada enviada por el usuario no contiene caracteres peligrosos que puedan influir
+en la forma en que los navegadores interpretar la información de la página. Por ejemplo, la entrada del usuario que contiene la cadena "<script>" es un buen
+indicador de que la entrada contiene un XSS carga útil. En este caso, el servidor podría bloquear la solicitud o desinfectarla
+eliminar o escapar de los caracteres especiales antes de continuar con el procesamiento
+
+En el contexto de nuestro ejemplo, la aplicación necesita codificar especial caracteres en un formato utilizado por documentos HTML. Por ejemplo, la izquierda
+y los corchetes en ángulo recto se pueden codificar en caracteres HTML & lt y & gt. Para evitar XSS, la aplicación debe escapar de los caracteres que tienen
+que significa en HTML, como el carácter &, los corchetes angulares <y>, un solo y comillas dobles y el carácter de barra inclinada.Escapar garantiza que
+los navegadores no malinterpreten estos caracteres como código para ejecutar. Esto es lo que hacen la mayoría de las aplicaciones modernas para prevenir XSS. La aplicación 
+debe hacer esto para cada pieza de entrada del usuario que será procesado o accedido por el navegador de un usuario. Muchos marcos de JavaScript modernos como React, Angular 2+ y Vue.js hacen esto automáticamente por usted, por lo que
+muchas vulnerabilidades XSS se pueden prevenir eligiendo el JavaScript correcto marco para usar
+
+La prevención de XSS basado en DOM requiere un enfoque diferente. Ya que la entrada del usuario malintencionado no pasará por el servidor, desinfectando los datos
+que entra y sale del servidor no funcionará. En cambio, las aplicaciones debe evitar el código que reescribe el documento HTML en función de la entrada del usuario,
+y la aplicación debe implementar la validación de entrada del lado del cliente antes de que sea insertado en el DOM. También puede tomar medidas para mitigar
+el impacto de las fallas XSS si suceda. Primero, puede configurar la marca HttpOnly en cookies sensibles que su sitio utiliza. Esto evita que los atacantes
+roben esas cookies a través de XSS. También debe implementar la respuesta HTTP Content-Security-Policy encabezamiento. Este encabezado le permite 
+restringir cómo recursos como JavaScript, CSS, o las imágenes se cargan en sus páginas web. Para evitar XSS, puede instruir al
+navegador para ejecutar solo scripts de una lista de fuentes. Para más información sobre la prevención de ataques XSS, visite la hoja de trucos 
+de prevención de OWASP XSS,
+
+https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html.
