@@ -1,4 +1,4 @@
-Blind XSS
+#Blind XSS
 Las vulnerabilidades ciegas de XSS son vulnerabilidades XSS almacenadas cuya entrada maliciosa
 es almacenado por el servidor y ejecutado en otra parte de la aplicación o en otra aplicación que no puede ver.
 Por ejemplo, supongamos que una página en example.com le permite enviar un
@@ -12,7 +12,7 @@ peligrosas como vulnerabilidades XSS almacenadas habitualmente. A menudo, XSS ci
 utilizado para atacar a los administradores, exfiltrar sus datos y comprometer sus
 cuentas.
 
-XSS reflejado
+#XSS reflejado
 Las vulnerabilidades reflejadas de XSS ocurren cuando la entrada del usuario se devuelve al usuario
 sin almacenarse en una base de datos. La aplicación toma la entrada del usuario, la procesa en el lado del servidor y la devuelve inmediatamente al usuario.
 El primer ejemplo que mostré, con el formulario de correo electrónico, involucró un Ataque XSS. Estos problemas a menudo ocurren cuando el servidor depende
@@ -32,7 +32,7 @@ atacantes para ejecutar código en cualquiera que acceda a sus recursos almacena
 XSS reflejado permite a los atacantes ejecutar código en los navegadores de las víctimas
 que hacen clic en sus enlaces maliciosos.
 
-XSS basado en DOM es similar al XSS reflejado, excepto que en XSS basado en DOM,
+#XSS basado en DOM es similar al XSS reflejado, excepto que en XSS basado en DOM,
 la entrada del usuario nunca sale del navegador del usuario. En XSS basado en DOM, el La aplicación toma la entrada del usuario, la procesa en el navegador de la víctima y
 luego se lo devuelve al usuario. El modelo de objetos de documento (DOM) es un modelo que los navegadores utilizan para representar una página web. El DOM representa
 la estructura de una página web; define lo básico propiedades y comportamiento de cada elemento HTML, y ayuda a los scripts a acceder y 
@@ -46,7 +46,7 @@ requieren la participación del servidor, porque se ejecuta cuando la entrada de
 el código fuente de la página en el navegador directamente. El script XSS nunca es
 enviado al servidor, por lo que la respuesta HTTP del servidor no cambiará.
 
-SELF XSS
+#SELF XSS
 Los ataques Self-XSS requieren que las víctimas ingresen ellos mismos una carga útil maliciosa. Para realizarlos, los atacantes deben engañar a los usuarios para que hagan mucho más que simplemente
 ver una página o navegar a una URL en particular.Por ejemplo, supongamos que un campo del panel de control de un usuario es vulnerable a
 XSS almacenado. Pero dado que solo la víctima puede ver y editar el campo, no hay forma para que un atacante entregue la carga útil a menos que el atacante pueda de alguna manera
