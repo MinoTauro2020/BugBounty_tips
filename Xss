@@ -1,0 +1,61 @@
+Blind XSS
+Las vulnerabilidades ciegas de XSS son vulnerabilidades XSS almacenadas cuya entrada maliciosa
+es almacenado por el servidor y ejecutado en otra parte de la aplicación o en otra aplicación que no puede ver.
+Por ejemplo, supongamos que una página en example.com le permite enviar un
+mensaje al personal de soporte del sitio. Cuando un usuario envía un mensaje, eso Secuencias de comandos entre sitios
+La entrada no se valida o desinfecta de ninguna manera antes de que se procese en el
+la página de administración del sitio. Un atacante puede enviar un mensaje con código JavaScript.
+y hacer que ese código lo ejecute cualquier administrador que vea ese mensaje.
+Estos defectos XSS son más difíciles de detectar, ya que no puede encontrarlos
+buscando información reflejada en la respuesta del servidor, pero pueden ser tan
+peligrosas como vulnerabilidades XSS almacenadas habitualmente. A menudo, XSS ciego puede ser
+utilizado para atacar a los administradores, exfiltrar sus datos y comprometer sus
+cuentas.
+
+XSS reflejado
+Las vulnerabilidades reflejadas de XSS ocurren cuando la entrada del usuario se devuelve al usuario
+sin almacenarse en una base de datos. La aplicación toma la entrada del usuario, la procesa en el lado del servidor y la devuelve inmediatamente al usuario.
+El primer ejemplo que mostré, con el formulario de correo electrónico, involucró un Ataque XSS. Estos problemas a menudo ocurren cuando el servidor depende
+de la entrada del usuario.para construir páginas que muestren resultados de búsqueda o mensajes de error. Por ejemplo, digamos que un sitio tiene una función de búsqueda.
+El usuario puede ingresar un término de búsqueda a través de un parámetro de URL, y la página mostrará un mensaje que contiene el término
+en la parte superior de la página de resultados. Si un usuario busca abc, el código fuente del
+El mensaje relacionado podría verse así:
+<h2> Ha buscado abc; aquí están los resultados </h2>
+Si la función de búsqueda muestra cualquier cadena de búsqueda enviada por el usuario en
+la página de resultados, un término de búsqueda como el siguiente haría que una secuencia de comandos
+incrustado en la página de resultados y ejecutado por el navegador:
+https://example.com/search?q=<script>alert('XSS by Vickie '); </script>
+Si un atacante puede engañar a las víctimas para que visiten esta URL, la carga útil
+se incrustan en su versión de la página, lo que hace que el navegador de la víctima
+ejecute cualquier código que le guste al atacante. A diferencia de XSS almacenado, que permite
+atacantes para ejecutar código en cualquiera que acceda a sus recursos almacenados,
+XSS reflejado permite a los atacantes ejecutar código en los navegadores de las víctimas
+que hacen clic en sus enlaces maliciosos.
+
+XSS basado en DOM es similar al XSS reflejado, excepto que en XSS basado en DOM,
+la entrada del usuario nunca sale del navegador del usuario. En XSS basado en DOM, el La aplicación toma la entrada del usuario, la procesa en el navegador de la víctima y
+luego se lo devuelve al usuario. El modelo de objetos de documento (DOM) es un modelo que los navegadores utilizan para representar una página web. El DOM representa
+la estructura de una página web; define lo básico propiedades y comportamiento de cada elemento HTML, y ayuda a los scripts a acceder y 
+modificar el contenido de la página. XSS basado en DOM se orienta a los DOM directamente: ataca la copia local del cliente de la página web en su lugar
+de pasar por el servidor. una página toma datos proporcionados por el usuario y altera dinámicamente el DOM en función de
+esa entrada. Las bibliotecas de JavaScript como jQuery son propensas a XSS basado en DOM
+ya que alteran dinámicamente los elementos DOM.
+ Como en XSS reflejado, los atacantes envían cargas útiles XSS basadas en DOM a través del
+la entrada del usuario de la víctima. A diferencia de XSS reflejado, una secuencia de comandos XSS basada en DOM no
+requieren la participación del servidor, porque se ejecuta cuando la entrada del usuario modifica
+el código fuente de la página en el navegador directamente. El script XSS nunca es
+enviado al servidor, por lo que la respuesta HTTP del servidor no cambiará.
+
+SELF XSS
+Los ataques Self-XSS requieren que las víctimas ingresen ellos mismos una carga útil maliciosa. Para realizarlos, los atacantes deben engañar a los usuarios para que hagan mucho más que simplemente
+ver una página o navegar a una URL en particular.Por ejemplo, supongamos que un campo del panel de control de un usuario es vulnerable a
+XSS almacenado. Pero dado que solo la víctima puede ver y editar el campo, no hay forma para que un atacante entregue la carga útil a menos que el atacante pueda de alguna manera
+engañar a la víctima para que cambie el valor del campo en la carga útil XSS. Si alguna vez ha visto publicaciones en las redes sociales
+o mensajes de texto que le dicen que pegue un fragmento de código en su navegador para "hacer algo genial", probablemente fue código de ataque destinad
+o a engañarlo para que lance self-XSS contra usted mismo. Los atacantes a menudo incorporan una parte de la carga útil maliciosa (generalmente a través de una
+URL como bitly.com para que las víctimas no sospechen nada) en un código de aspecto complicado y utilizan las redes sociales para engañar a los usuarios desprevenidos
+atacándose a sí mismos.
+En las recompensas de errores, los errores de auto-XSS generalmente no se aceptan como misiones secundarias válidas porque requieren ingeniería social. Errores que requieren redes sociales
+La ingeniería o la manipulación de las víctimas no suelen aceptarse en errores.
+programas de recompensas porque no son cuestiones puramente técnicas.
+
