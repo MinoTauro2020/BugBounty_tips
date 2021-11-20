@@ -1,0 +1,24 @@
+X-Client-IP: localhost
+X-Forwarded-For: client1
+X-Real-IP: localhost
+True-Client-IP: localhost
+CF-Connecting-IP : localhost
+X-Cluster-Client-IP: localhost
+Fastly-Client-IP: localhost
+X-Originating-IP: localhost
+X-Forwarded-For: localhost
+X-Remote-IP: localhost
+X-Remote-Addr: localhost
+X-Client-IP: localhost
+X-Host: localhost
+X-Forwarded-Host: localhost
+X-Forwarded-Proto: localhost
+X-Forwarded-For-IP: localhost
+X-Forwarded-By: localhost
+X-True-IP: localhost
+X-Custom-IP-Authorization: localhost
+/*
+/%2f/
+/./
+/
+/*/
