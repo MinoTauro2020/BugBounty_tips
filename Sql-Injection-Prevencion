@@ -1,0 +1,8 @@
+https://hackcode.club/sql-injection-que-es-ejemplos-y-prevencion/
+
+Blindar la base de datos y utilizar código más seguro: puede ser obvio pero realizar buenas practicas de desarrollo y de seguridad en ambas partes es siempre una buena opción.
+Filtra y valida todos las entradas de datos: recuerda que una aplicación web suele tener entrada de datos, es por eso que no debes dejar que dichos datos lleguen directamente a la consulta y menos a la base de datos sin antes ser validados.
+Sentencias preparadas y consultas parametrizadas: siempre valida dentro del código tus consultas y usa funciones las cuales no permitan que caracteres especiales o código malicioso pueda ejecutarse una vez que los datos lleguen a la consulta.
+Protege tu servidor o sitio web por fuera: una opción muy buena es usar mediad externas a la aplicación web que es el uso de un WAF (Web Application Firewall), en el cual podrás brindar más seguridad a tu sitio web y a tu servidor que aloja dicha aplicación.
+
+https://shahjerry33.medium.com/sql-injection-remote-code-execution-double-p1-6038ca88a2ec
