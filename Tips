@@ -1,3 +1,4 @@
+https://shahjerry33.medium.com/shellshock-high-voltage-a6bd2ce69659 SHELLSOCK
 #Command Injection
 url/cgi-bin/parameter=payload
 payload 1 [PING]
