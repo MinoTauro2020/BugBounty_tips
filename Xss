@@ -111,3 +111,9 @@ Encode data on output: at the point where user-controllable data is output in HT
 Use appropriate response headers: to prevent XSS in HTTP responses that aren't intended to contain any HTML or JavaScript, you can use the Content-- Type and X-Content-Type-Options headers to ensure that browsers interpret the responses in the way you intend.
 Content Security Policy: as a last line of defense, you can use Content Security Policy (CSP) to reduce the severity of any XSS vulnerabilities that still occur.
 
+SOLUCION
+/* Prevent XSS input */
+$_GET   = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
+$_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+/* I prefer not to use $_REQUEST...but for those who do: */
+$_REQUEST = (array)$_POST + (array)$_GET + (array)$_REQUEST;
