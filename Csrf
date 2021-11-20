@@ -1,0 +1,7 @@
+CSRF
+Los endpoints GET no deben tener acciones de modificación, y si esto se necesita se debería requerir una petición POST. Además los endpoints POST no debería aceptar la intercambiabilidad de aceptar peticiones GET con parametros en query string
+Un token CSRF debería ser incluido en cada elemento <form> mediante un input oculto. Este token debe ser único para cada usuario y almacenado (por ejemplo, en una cookie). De esta forma el servidor puede mirar si el valor requerido es enviado, y en cierto modo lo idea sería descartar la petición si el valor no concuerda con lo esperado.
+Este método de protección recae en la imposibilidad de que un atacante pueda predecir este token autogenerado en cada inicio de sesión. Cabe aclarar que este token debería ser regenerado en cada inicio de sesión.
+Al igual que con {{Glosario ("XSS")}}, el filtrado de entrada es importante.
+Debería de existir siempre un requerimiento de confirmación para cualquier acción delicada,.
+Las cookies empleadas en acciones delicadas deberían de tener una vida útil bre
