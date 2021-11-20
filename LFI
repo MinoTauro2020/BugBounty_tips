@@ -1,0 +1,6 @@
+https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion
+https://ironhackers.es/tutoriales/lfi-to-rce-envenenando-ssh-y-apache-logs/
+https://github.com/payloadbox/rfi-lfi-payload-list
+http://10.10.10.14/menu.php?file=c:\xamp\apache\logs\access.log&cmd=ls
+https://notchxor.github.io/oscp-notes/2-web/LFI-RFI/
+http://www.hackingarticles.in/rce-with-lfi-and-ssh-log-poisoning/
