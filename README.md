@@ -1,4 +1,4 @@
-# BugBounty_tips
+## BugBountyTips
 
 
 
