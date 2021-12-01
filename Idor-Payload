@@ -1,0 +1,8 @@
+GET /api/users/1337 => 401
+
+GET /api/users/
+x-user-id: 1337
+=>> 200 Ok 
+
+POST /api/users/<myID>/password-reset
+x-user-id: <victimID>
