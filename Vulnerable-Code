@@ -3,6 +3,7 @@ https://phpgurukul.com/user-registration-login-and-user-management-system-with-a
 
 LFI
 https://www.welivesecurity.com/la-es/2015/01/12/como-funciona-vulnerabilidad-local-file-inclusion/
+https://fwhibbit.es/lfi-rfi-rce-jugando-con-los-include-y-fopen-de-php
 
 RFI
 https://www.yumpu.com/es/document/read/39628028/remote-file-inclusion
