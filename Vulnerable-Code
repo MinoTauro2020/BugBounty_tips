@@ -1,3 +1,12 @@
+https://blog.riotsecurityteam.com/recon-vulnerable-code-assessment-exploit-automation-bypasses-and-patching-all-one-python-php
+https://phpgurukul.com/user-registration-login-and-user-management-system-with-admin-panel/
+
+LFI
+https://www.welivesecurity.com/la-es/2015/01/12/como-funciona-vulnerabilidad-local-file-inclusion/
+
+RFI
+https://www.yumpu.com/es/document/read/39628028/remote-file-inclusion
+https://laseguridad.online/questions/15791/explota-el-error-de-lfi-cuando-se-agrega-un-incphp-al-nombre
 https://www.generacodice.com/es/articolo/539150/Would+this+redirect+script+open+me+up+for+code+injection+or+remote+file+inclusion%3F
 https://parasitovirtual.wordpress.com/2010/04/27/introduccion-a-los-ataques-rfi/
 
@@ -17,4 +26,3 @@ https://www.netsparker.com/blog/web-security/remote-code-evaluation-execution/
 
 XSS
 https://blog.nivel4.com/hacking/buenas-practicas-de-desarrollo-seguro-a7-secuencia-de-comandos-en-sitios-cruzados-xss/
-
