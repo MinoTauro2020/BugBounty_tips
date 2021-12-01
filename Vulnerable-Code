@@ -1,1 +1,13 @@
 https://blog.riotsecurityteam.com/recon-vulnerable-code-assessment-exploit-automation-bypasses-and-patching-all-one-python-php
+
+LFI
+https://www.welivesecurity.com/la-es/2015/01/12/como-funciona-vulnerabilidad-local-file-inclusion/
+
+RFI
+https://www.yumpu.com/es/document/read/39628028/remote-file-inclusion
+https://laseguridad.online/questions/15791/explota-el-error-de-lfi-cuando-se-agrega-un-incphp-al-nombre
+https://www.generacodice.com/es/articolo/539150/Would+this+redirect+script+open+me+up+for+code+injection+or+remote+file+inclusion%3F
+https://parasitovirtual.wordpress.com/2010/04/27/introduccion-a-los-ataques-rfi/
+
+PATH TRANSVERSAL
+https://henryraul.wordpress.com/2017/04/01/pruebas-de-seguridad-de-directory-tranversal-con-burp-suite-y-owasp-zap-proxy/
