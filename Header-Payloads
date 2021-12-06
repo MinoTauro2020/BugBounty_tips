@@ -2,6 +2,7 @@ X-SITE-REQ
 X-Client-IP: localhost
 X-Forwarded-For: client1
 X-Real-IP: localhost
+x-site-req: permitted
 True-Client-IP: localhost
 CF-Connecting-IP : localhost
 X-Cluster-Client-IP: localhost
