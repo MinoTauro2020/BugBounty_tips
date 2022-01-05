@@ -1,0 +1,61 @@
+Informacion Sensible Expuesta
+Pruebas
+
+FICHEROS
+/robots.txt
+/sitemap.xml
+
+DIRECTORIOS
+Brute Force
+Cewl
+Directory Listing
+
+DEVELOPER COMMENTS
+HTML comentaries
+
+ERROR MESSAGES
+Los mensajes de error detallados también pueden proporcionar información
+sobre las diferentes tecnologías que utiliza el sitio web. Por ejemplo,
+podrían nombrar explícitamente un motor de plantilla, tipo de base de datos
+o servidor que utiliza el sitio web, junto con su número de versión. 
+Esta información puede ser útil porque puede buscar fácilmente cualquier v
+ulnerabilidad documentada que pueda existir para esta versión. De manera similar, 
+puede verificar si hay errores de configuración comunes o configuraciones 
+predeterminadas peligrosas que pueda aprovechar. Algunos de estos pueden estar destacados en la documentación oficial.
+/product?productId=1
+/product?productId="example"
+
+
+DEBUGGING DATA
+Muchos sitios web generan registros y 
+mensajes de error personalizados que contienen una gran cantidad de información
+sobre el comportamiento de la aplicació
+/cgi-bin/phpinfo
+
+
+USER ACCOUNT PAGES
+GET /user/personal-info?user=carlos
+
+#SOURCE VIA BACKUP
+Los datos confidenciales a veces incluso están codificados dentro del código fuente.
+Los ejemplos típicos de esto incluyen claves de API y credenciales para acceder a componentes de back-end.
+puede engañar a un sitio web para que devuelva el contenido del archivo. Por ejemplo, 
+los editores de texto suelen generar archivos de copia de seguridad temporales mientras 
+se edita el archivo original. Estos archivos temporales generalmente se indican de alguna manera, como agregando una tilde (~) 
+al nombre del archivo o agregando una extensión de archivo diferente. 
+En ocasiones, solicitar un archivo de código con una extensión de archivo de respaldo
+puede permitirle leer el contenido del archivo en la respuesta
+
+#INSECURE CONFIGURATION
+Los desarrolladores pueden olvidar deshabilitar varias opciones de depuración en el entorno de producción. 
+Por ejemplo, el TRACE método HTTP está diseñado para fines de diagnóstico
+
+
+#VERSION CONTROL HISTORY /.git
+Prácticamente todos los sitios web se desarrollan utilizando algún tipo de sistema de control de versiones, 
+como Git. De forma predeterminada, un proyecto de Git almacena todos sus datos de control de versiones en una carpeta llamada .git. 
+Ocasionalmente, los sitios web exponen este directorio en el entorno de producción. 
+En este caso, es posible que pueda acceder a él simplemente navegando a /.git.
+
+
+
