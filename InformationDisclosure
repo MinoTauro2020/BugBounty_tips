@@ -49,7 +49,8 @@ puede permitirle leer el contenido del archivo en la respuesta
 #INSECURE CONFIGURATION
 Los desarrolladores pueden olvidar deshabilitar varias opciones de depuración en el entorno de producción. 
 Por ejemplo, el TRACE método HTTP está diseñado para fines de diagnóstico
-
+TRACE
+X-CUSTOM-IP-AUTHORIZATION
 
 #VERSION CONTROL HISTORY /.git
 Prácticamente todos los sitios web se desarrollan utilizando algún tipo de sistema de control de versiones, 
