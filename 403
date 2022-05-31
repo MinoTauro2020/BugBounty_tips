@@ -1,0 +1,58 @@
+ Add Rate-Limit / Threads Option
+ Add an Option for Scan Types (fast, normal, aggressive or only path manipulation / header manipulation)
+ Export cURL Command for Each Request
+ Add Parameters to Save Output According to HTTP Status Codes
+ Add Parameters to Save Output According to Page Size Anomalies
+
+/%2e/secret
+/secret/
+/secret..;/
+/secret/..;/
+/secret%20
+/secret%09
+/secret%00
+/secret.json
+/secret.css
+/secret.html
+/secret?
+/secret??
+/secret???
+/secret?testparam
+/secret#
+/secret#test
+/secret/.
+//secret//
+/./secret/./
+
+X-Original-URL: /secret
+X-Rewrite-URL: /secret
+
+Headers:
+
+X-Custom-IP-Authorization
+X-Forwarded-For
+X-Forward-For
+X-Remote-IP
+X-Originating-IP
+X-Remote-Addr
+X-Client-IP
+X-Real-IP
+Values:
+
+localhost
+localhost:80
+localhost:443
+127.0.0.1
+127.0.0.1:80
+127.0.0.1:443
+2130706433
+0x7F000001
+0177.0000.0000.0001
+0
+127.1
+10.0.0.0
+10.0.0.1
+172.16.0.0
+172.16.0.1
+192.168.1.0
+192.168.1.1
